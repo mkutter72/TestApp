@@ -20,23 +20,23 @@ $(document).ready(function () {
     console.log("twitter1");
 
 OAuth.initialize('-wTpkEkqzYX2b5EcW8-2pYzKuC0')
-OAuth.popup('twitter').done(function(result) {
-    console.log(result)
-    // do some stuff with result
-})
+// OAuth.popup('twitter').done(function(result) {
+//     console.log(result)
+//     // do some stuff with result
+// })
     // Initialize the SDK
     // OAuth.initialize('-wTpkEkqzYX2b5EcW8-2pYzKuC0');
 
 
-    // //Example with Twitter with the cache option enabled
-    // OAuth.popup('twitter', {cache: true}).done(function(twitter) {
-    //   //make API calls with `twitter`
-    //   console.log("passed");
-    //     console.log(twitter);
-    // }).fail(function(err) {
-    //   //todo when the OAuth flow failed
-    //   console.log("failed:   "+ err);
-    // });
+    //Example with Twitter with the cache option enabled
+    OAuth.popup('twitter', {cache: true}).done(function(twitter) {
+      //make API calls with `twitter`
+      console.log("passed");
+        console.log(twitter);
+    }).fail(function(err) {
+      //todo when the OAuth flow failed
+      console.log("failed:   "+ err);
+    });
 
 
   });
